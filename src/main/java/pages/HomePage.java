@@ -13,10 +13,17 @@ public class HomePage {
     private final By formAuthenticationLink = By.linkText("Form Authentication");
 
     private final By checkboxLink = By.linkText("Checkboxes");
+    private final By dynamicLoadingLink = By.linkText("Dynamic Loading");
 
 
     public LoginPage clickOnFormAuthenticationLink(){
         driver.findElement(formAuthenticationLink).click();
         return new LoginPage(driver);
     }
+
+    public DynamicLoadingPage clickOnDynamicLoadingLink(){
+        driver.findElement(dynamicLoadingLink).click();
+        return new DynamicLoadingPage(driver);
+    }
+
 }

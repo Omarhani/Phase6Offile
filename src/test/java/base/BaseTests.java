@@ -8,6 +8,8 @@ import org.testng.annotations.BeforeMethod;
 import pages.HomePage;
 import pages.LoginPage;
 
+import java.time.Duration;
+
 public class BaseTests {
 
     protected WebDriver driver;
