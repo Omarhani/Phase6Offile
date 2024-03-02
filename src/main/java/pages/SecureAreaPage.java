@@ -15,6 +15,8 @@ public class SecureAreaPage {
     private final By validationMessage = By.id("flash");
 
     public String getValidationMessage(){
-        return driver.findElement(validationMessage).getText();
+        String text = null;
+        text = driver.findElement(validationMessage).getText();
+        return text;
     }
 }

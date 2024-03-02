@@ -19,6 +19,8 @@ public class HomePage {
 
     private final By jsAlertLink = By.linkText("JavaScript Alerts");
 
+    private final By WYSIWYGEditorLink = By.linkText("WYSIWYG Editor");
+
 
     public LoginPage clickOnFormAuthenticationLink(){
         clickOnLink(formAuthenticationLink);
@@ -37,6 +39,11 @@ public class HomePage {
     public JSAlertPage clickOnJSAlertLink(){
         clickOnLink(jsAlertLink);
         return new JSAlertPage(driver);
+    }
+
+    public WYSIWYGEditorPage clickOnWYSIWYGEditorLink(){
+        clickOnLink(WYSIWYGEditorLink);
+        return new WYSIWYGEditorPage(driver);
     }
     private void clickOnLink(By locator){
         driver.findElement(locator).click();
