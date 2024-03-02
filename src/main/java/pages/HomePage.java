@@ -17,6 +17,8 @@ public class HomePage {
 
     private final By dropdownLink = By.linkText("Dropdown");
 
+    private final By jsAlertLink = By.linkText("JavaScript Alerts");
+
 
     public LoginPage clickOnFormAuthenticationLink(){
         clickOnLink(formAuthenticationLink);
@@ -31,6 +33,10 @@ public class HomePage {
     public DropdownPage clickOnDropdownLink(){
         clickOnLink(dropdownLink);
         return new DropdownPage(driver);
+    }
+    public JSAlertPage clickOnJSAlertLink(){
+        clickOnLink(jsAlertLink);
+        return new JSAlertPage(driver);
     }
     private void clickOnLink(By locator){
         driver.findElement(locator).click();
