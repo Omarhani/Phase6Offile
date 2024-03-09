@@ -21,6 +21,8 @@ public class HomePage {
 
     private final By WYSIWYGEditorLink = By.linkText("WYSIWYG Editor");
 
+    private final By hoverLink = By.linkText("Hovers");
+
 
     public LoginPage clickOnFormAuthenticationLink(){
         clickOnLink(formAuthenticationLink);
@@ -44,6 +46,11 @@ public class HomePage {
     public WYSIWYGEditorPage clickOnWYSIWYGEditorLink(){
         clickOnLink(WYSIWYGEditorLink);
         return new WYSIWYGEditorPage(driver);
+    }
+
+    public HoverPage clickOnHoverLink(){
+        clickOnLink(hoverLink);
+        return new HoverPage(driver);
     }
     private void clickOnLink(By locator){
         driver.findElement(locator).click();
